@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Dashboard</title>
+
+	<link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>Dashboard</h1>
+		</div>
+
+		<ol class="breadcrumb">
+			<li>
+				<a href="#">Home</a>
+			</li>
+			<li>
+				<a href="#">Users</a>
+			</li>
+			<li class="active">List</li>
+		</ol>
+
+		<div class="row">
+			<div class="col-md-3">
+				<div class="list-group">
+					<a class="list-group-item active" href="#"><i class="fa fa-user"></i> Users</a>
+					<a class="list-group-item" href="#"><i class="fa fa-picture-o"></i> Media</a>
+					<a class="list-group-item" href="#"><i class="fa fa-sign-out"></i> Logout</a>
+				</div>
+			</div>
+
+			<div class="col-md-9">
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active" role="presentation">
+						<a aria-controls='list' data-toggle='tab' href="#list"
+						role='tab'><i class="fa fa-list-ul"></i> List</a>
+					</li>
+
+					<li role="presentation">
+						<a aria-controls='add' data-toggle='tab' href="#add"
+						role='tab'><i class="fa fa-plus"></i> Add</a>
+					</li>
+
+					<li role="presentation">
+						<a aria-controls='statistics' data-toggle='tab' href=
+						"#statistics" role='tab'><i class=
+						"fa fa-bar-chart"></i> Statistics</a>
+					</li>
+				</ul>
+
+				<!-- Tab panes -->
+
+				<div class="tab-content">
+					<div class="tab-pane active" id="list" role="tabpanel">
+						<h1>List Users</h1>
+						<table class="table table-striped">
+							<tr>
+								<td><i class="fa fa-pencil"></i> <i class=
+								"fa fa-trash"></i></td>
+								<td>Dave Smith</td>
+								<td>dave@smith.com</td>
+							</tr>
+
+							<tr>
+								<td><i class="fa fa-pencil"></i> <i class=
+								"fa fa-trash"></i></td>
+								<td>Dave Smith</td>
+								<td>dave@smith.com</td>
+							</tr>
+
+							<tr>
+								<td><i class="fa fa-pencil"></i> <i class=
+								"fa fa-trash"></i></td>
+								<td>Dave Smith</td>
+								<td>dave@smith.com</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="tab-pane" id="add" role="tabpanel">
+						<h1>Add User</h1>
+						<form>
+							<div class="form-group">
+								<label for="InputName">Name</label>
+								<input class="form-control" id="InputName"
+								placeholder="Name" type="text">
+							</div>
+
+							<div class="form-group">
+								<label for="InputEmail">Email</label>
+								<input class="form-control" id="InputEmail"
+								placeholder="Enter Email" type="email">
+							</div>
+							
+							<button class="btn btn-default" type="submit">Submit</button>
+						</form>
+					</div>
+
+					<div class="tab-pane" id="statistics" role="tabpanel">
+						<div id="container"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script> 
+	<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
+	<script src="./bower_components/highcharts-release/highcharts.js"></script> 
+	<script src="./js/main.js"></script>
+</body>
+</html>
